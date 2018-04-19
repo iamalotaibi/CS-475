@@ -1,0 +1,24 @@
+#!/bin/bash
+
+resultFile="results.txt"
+outputFile="output.txt"
+> $resultFile
+> $outputFile
+# number of threads:
+for t in 1 2 4
+do
+	echo _NUMT\(Number of Threads\) = $t >> $outputFile
+	# number of subdivisions
+	for s in 1000 2000 4000 16000 64000 256000 1024000 4096000
+	do
+		echo \| >> $outputFile
+		echo .---_NUMS\(Number of subdivisions\) = $s >> $outputFile
+		g++ -D_NUMT=$t -D_NUMS=$t project_1_thread_prog.cpp -o thread_prog -lm -fopenmp
+		./thread_prog >> $outputFile
+	done
+	echo --------------------------------------------------------- >> $outputFile
+done
+g++ -o speed_prog project_1_speed_prog.cpp
+./speed_prog >> $outputFile
+rm thread_prog speed_prog $resultFile
+cat $outputFile
