@@ -3,9 +3,10 @@
 #include <math.h>
 #include <string.h>
 
-#define NUMT	         _NUMT
-#define NUMNODES         _NUMS
-
+#define NUMT	        _NUMT
+#define NUMNODES        _NUMS
+#define NUMTRIES	10
+	
 #define XMIN	 0.
 #define XMAX	 3.
 #define YMIN	 0.
@@ -90,34 +91,64 @@ int main(){
         fprintf(stderr, "OpenMP is not supported here -- sorry.\n");
         return 1;
 #endif
+        double maxMegaHeights = 0.;
+        double sumMegaHeights = 0.;
+	double sumTime = 0.;
 
         omp_set_num_threads( NUMT );
-	fprintf(stderr, "Using %d threads\n", NUMT);
 
-        double time0 = omp_get_wtime( );
+	for ( int t = 0; t < NUMTRIES; t++)
+	{
+	        double time0 = omp_get_wtime( );
 
 
-	// the area of a single full-sized tile:
-	float fullTileArea = (  ( ( XMAX - XMIN )/(float)(NUMNODES-1) )  *
-				( ( YMAX - YMIN )/(float)(NUMNODES-1) )  );
-	// sum up the weighted heights into the variable "volume"
-	// using an OpenMP for loop and a reduction:
-	double sum = 0.;
-        #pragma omp parallel for reduction(+:sum)
-        for( int i = 0; i < ( NUMNODES * NUMNODES ); i++ )
-        {
-		int iu = i % NUMNODES;
-		int iv = i / NUMNODES;
-		sum += Height(iu, iv);
+		// the area of a single full-sized tile:
+		float fullTileArea = (  ( ( XMAX - XMIN )/(float)(NUMNODES-1) )  *
+					( ( YMAX - YMIN )/(float)(NUMNODES-1) )  );
+		// sum up the weighted heights into the variable "volume"
+		// using an OpenMP for loop and a reduction:
+		double sum = 0.;
+	        #pragma omp parallel for reduction(+:sum)
+	        for( int i = 0; i < ( NUMNODES * NUMNODES ); i++ )
+	        {
+			int iu = i % NUMNODES;
+			int iv = i / NUMNODES;
+			if(iu % (NUMNODES - 1) == 0)
+			{
+				iu /= 2;
+			}
+			if(iv % (NUMNODES - 1) == 0)
+			{
+				iv /= 2;
+			}
+			int currentTrap = Height(iu, iv) * fullTileArea;
+			sum += currentTrap;
+		}
+
+	        double time1 = omp_get_wtime( );
+                double megaHeights = (double)(NUMNODES*NUMNODES)/(time1-time0)/1000000.;
+                sumMegaHeights += megaHeights;
+                if( megaHeights > maxMegaHeights )
+                        maxMegaHeights = megaHeights;
+
+		sumTime += (double)(1000000.*(time1-time0));
 	}
-        double time1 = omp_get_wtime( );
-        double megaHeights = (double)(NUMNODES * NUMNODES)/(time1-time0)/1000000.;
+	
 
-        printf("        Performance = %8.2lf MegaHeights/Sec\n", megaHeights);
+	double avgMegaHeights = sumMegaHeights/(double)NUMTRIES;
+        printf("   Peak Performance = %8.2lf MegaHeights/Sec\n", maxMegaHeights);
+        printf("Average Performance = %8.2lf MegaHeights/Sec\n", avgMegaHeights);
+
+	double avgTime = sumTime/(double)NUMTRIES;
+	printf("Average Elapsed Time = %7.2lf microseconds\n", avgTime);
+
+        fprintf(stderr, "   Peak Performance = %8.2lf MegaHeights/Sec\n", maxMegaHeights);
+        fprintf(stderr, "Average Performance = %8.2lf MegaHeights/Sec\n", avgMegaHeights);
+	fprintf(stderr, "Average Elapsed Time = %7.2lf microseconds\n", avgTime);
 
 	FILE* fp;
 	fp = fopen("results.txt", "a");
-	fprintf(fp, "%.2lf\n", megaHeights);
+	fprintf(fp, "%.2lf\n", avgTime);
 	fclose(fp);
 
         return 0;

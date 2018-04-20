@@ -1,106 +1,122 @@
 _NUMT(Number of Threads) = 1
 |
-.---_NUMS(Number of subdivisions) = 1000
-        Performance =     0.26 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 10
+   Peak Performance =    11.74 MegaHeights/Sec
+Average Performance =    11.03 MegaHeights/Sec
+Average Elapsed Time =    9.65 microseconds
 |
-.---_NUMS(Number of subdivisions) = 2000
-        Performance =     0.07 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 20
+   Peak Performance =    12.18 MegaHeights/Sec
+Average Performance =    11.86 MegaHeights/Sec
+Average Elapsed Time =   33.98 microseconds
 |
-.---_NUMS(Number of subdivisions) = 4000
-        Performance =     0.23 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 40
+   Peak Performance =    12.26 MegaHeights/Sec
+Average Performance =    11.33 MegaHeights/Sec
+Average Elapsed Time =  145.48 microseconds
 |
-.---_NUMS(Number of subdivisions) = 16000
-        Performance =     0.26 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 160
+   Peak Performance =     9.82 MegaHeights/Sec
+Average Performance =     9.63 MegaHeights/Sec
+Average Elapsed Time = 2657.54 microseconds
 |
-.---_NUMS(Number of subdivisions) = 64000
-        Performance =     0.22 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 640
+   Peak Performance =    12.39 MegaHeights/Sec
+Average Performance =    12.32 MegaHeights/Sec
+Average Elapsed Time = 33240.66 microseconds
 |
-.---_NUMS(Number of subdivisions) = 256000
-        Performance =     0.25 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 2560
+   Peak Performance =    12.41 MegaHeights/Sec
+Average Performance =    12.28 MegaHeights/Sec
+Average Elapsed Time = 533668.48 microseconds
 |
-.---_NUMS(Number of subdivisions) = 1024000
-        Performance =     0.17 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 10240
+   Peak Performance =    12.34 MegaHeights/Sec
+Average Performance =    12.07 MegaHeights/Sec
+Average Elapsed Time = 8689541.29 microseconds
 |
-.---_NUMS(Number of subdivisions) = 4096000
-        Performance =     0.24 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 40960
+   Peak Performance =    12.18 MegaHeights/Sec
+Average Performance =    11.51 MegaHeights/Sec
+Average Elapsed Time = 146215820.98 microseconds
 ---------------------------------------------------------
 _NUMT(Number of Threads) = 2
 |
-.---_NUMS(Number of subdivisions) = 1000
-        Performance =     0.01 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 10
+   Peak Performance =    20.73 MegaHeights/Sec
+Average Performance =    16.27 MegaHeights/Sec
+Average Elapsed Time =   15.35 microseconds
 |
-.---_NUMS(Number of subdivisions) = 2000
-        Performance =     0.01 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 20
+   Peak Performance =    23.66 MegaHeights/Sec
+Average Performance =    18.61 MegaHeights/Sec
+Average Elapsed Time =   26.98 microseconds
 |
-.---_NUMS(Number of subdivisions) = 4000
-        Performance =     0.01 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 40
+   Peak Performance =    24.53 MegaHeights/Sec
+Average Performance =    22.47 MegaHeights/Sec
+Average Elapsed Time =   82.50 microseconds
 |
-.---_NUMS(Number of subdivisions) = 16000
-        Performance =     0.12 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 160
+   Peak Performance =    24.73 MegaHeights/Sec
+Average Performance =    24.14 MegaHeights/Sec
+Average Elapsed Time = 1061.45 microseconds
 |
-.---_NUMS(Number of subdivisions) = 64000
-        Performance =     0.12 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 640
+   Peak Performance =    24.61 MegaHeights/Sec
+Average Performance =    24.31 MegaHeights/Sec
+Average Elapsed Time = 16849.19 microseconds
 |
-.---_NUMS(Number of subdivisions) = 256000
-        Performance =     0.06 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 2560
+   Peak Performance =    24.59 MegaHeights/Sec
+Average Performance =    24.12 MegaHeights/Sec
+Average Elapsed Time = 271816.23 microseconds
 |
-.---_NUMS(Number of subdivisions) = 1024000
-        Performance =     0.01 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 10240
+   Peak Performance =    24.40 MegaHeights/Sec
+Average Performance =    23.57 MegaHeights/Sec
+Average Elapsed Time = 4457613.23 microseconds
 |
-.---_NUMS(Number of subdivisions) = 4096000
-        Performance =     0.06 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 40960
+   Peak Performance =    24.38 MegaHeights/Sec
+Average Performance =    24.15 MegaHeights/Sec
+Average Elapsed Time = 69485040.27 microseconds
 ---------------------------------------------------------
 _NUMT(Number of Threads) = 4
 |
-.---_NUMS(Number of subdivisions) = 1000
-        Performance =     0.06 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 10
+   Peak Performance =    24.81 MegaHeights/Sec
+Average Performance =    21.19 MegaHeights/Sec
+Average Elapsed Time =   16.02 microseconds
 |
-.---_NUMS(Number of subdivisions) = 2000
-        Performance =     0.01 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 20
+   Peak Performance =    38.70 MegaHeights/Sec
+Average Performance =    32.57 MegaHeights/Sec
+Average Elapsed Time =   22.36 microseconds
 |
-.---_NUMS(Number of subdivisions) = 4000
-        Performance =     0.01 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 40
+   Peak Performance =    48.24 MegaHeights/Sec
+Average Performance =    40.12 MegaHeights/Sec
+Average Elapsed Time =   49.08 microseconds
 |
-.---_NUMS(Number of subdivisions) = 16000
-        Performance =     0.06 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 160
+   Peak Performance =    47.20 MegaHeights/Sec
+Average Performance =    42.09 MegaHeights/Sec
+Average Elapsed Time =  615.75 microseconds
 |
-.---_NUMS(Number of subdivisions) = 64000
-        Performance =     0.01 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 640
+   Peak Performance =    47.61 MegaHeights/Sec
+Average Performance =    46.23 MegaHeights/Sec
+Average Elapsed Time = 8865.10 microseconds
 |
-.---_NUMS(Number of subdivisions) = 256000
-        Performance =     0.01 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 2560
+   Peak Performance =    48.19 MegaHeights/Sec
+Average Performance =    46.00 MegaHeights/Sec
+Average Elapsed Time = 142776.42 microseconds
 |
-.---_NUMS(Number of subdivisions) = 1024000
-        Performance =     0.01 MegaHeights/Sec
+.---_NUMS(Number of subdivisions) = 10240
+   Peak Performance =    47.88 MegaHeights/Sec
+Average Performance =    45.67 MegaHeights/Sec
+Average Elapsed Time = 2300040.57 microseconds
 |
-.---_NUMS(Number of subdivisions) = 4096000
-        Performance =     0.05 MegaHeights/Sec
----------------------------------------------------------
-treadsTime[0][0] = 0.26
-treadsTime[0][1] = 0.07
-treadsTime[0][2] = 0.23
-treadsTime[0][3] = 0.26
-treadsTime[0][4] = 0.22
-treadsTime[0][5] = 0.25
-treadsTime[0][6] = 0.17
-treadsTime[0][7] = 0.24
-treadsTime[1][0] = 0.01
-treadsTime[1][1] = 0.01
-treadsTime[1][2] = 0.01
-treadsTime[1][3] = 0.12
-treadsTime[1][4] = 0.12
-treadsTime[1][5] = 0.06
-treadsTime[1][6] = 0.01
-treadsTime[1][7] = 0.06
-treadsTime[2][0] = 0.06
-treadsTime[2][1] = 0.01
-treadsTime[2][2] = 0.01
-treadsTime[2][3] = 0.06
-treadsTime[2][4] = 0.01
-treadsTime[2][5] = 0.01
-treadsTime[2][6] = 0.01
-treadsTime[2][7] = 0.05
-         Speedup[0] =    4.00
-         Speedup[1] =    4.80
-Parallel Fraction[0] =   1.50
-Parallel Fraction[1] =   1.06
+.---_NUMS(Number of subdivisions) = 40960

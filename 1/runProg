@@ -7,13 +7,16 @@ outputFile="output.txt"
 # number of threads:
 for t in 1 2 4
 do
+	echo _NUMT\(Number of Threads\) = $t
 	echo _NUMT\(Number of Threads\) = $t >> $outputFile
 	# number of subdivisions
-	for s in 1000 2000 4000 16000 64000 256000 1024000 4096000
+	for s in 10 20 40 160 640 2560 10240 40960
 	do
+		echo \|
 		echo \| >> $outputFile
+		echo .---_NUMS\(Number of subdivisions\) = $s
 		echo .---_NUMS\(Number of subdivisions\) = $s >> $outputFile
-		g++ -D_NUMT=$t -D_NUMS=$t project_1_thread_prog.cpp -o thread_prog -lm -fopenmp
+		g++ -D_NUMT=$t -D_NUMS=$s project_1_thread_prog.cpp -o thread_prog -lm -fopenmp
 		./thread_prog >> $outputFile
 	done
 	echo --------------------------------------------------------- >> $outputFile
