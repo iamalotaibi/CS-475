@@ -2,15 +2,17 @@
 
 resultFile="results.txt"
 outputFile="output.txt"
+dataFile="data1.cvs"
 > $resultFile
 > $outputFile
+> $dataFile
 # number of threads:
 for t in 1 2 4
 do
 	echo _NUMT\(Number of Threads\) = $t
 	echo _NUMT\(Number of Threads\) = $t >> $outputFile
 	# number of subdivisions
-	for s in 10 20 40 160 640 2560 10240 40960
+	for s in 10 20 40 80 160 320 640 1280
 	do
 		echo \|
 		echo \| >> $outputFile

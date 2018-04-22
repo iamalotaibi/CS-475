@@ -1,122 +1,130 @@
 _NUMT(Number of Threads) = 1
 |
 .---_NUMS(Number of subdivisions) = 10
-   Peak Performance =    11.74 MegaHeights/Sec
-Average Performance =    11.03 MegaHeights/Sec
-Average Elapsed Time =    9.65 microseconds
+   Peak Performance =     6.69 MegaHeights/Sec
+Average Performance =     6.62 MegaHeights/Sec
+Average Elapsed Time =   15.20 microseconds
 |
 .---_NUMS(Number of subdivisions) = 20
-   Peak Performance =    12.18 MegaHeights/Sec
-Average Performance =    11.86 MegaHeights/Sec
-Average Elapsed Time =   33.98 microseconds
+   Peak Performance =     6.85 MegaHeights/Sec
+Average Performance =     6.80 MegaHeights/Sec
+Average Elapsed Time =   58.87 microseconds
 |
 .---_NUMS(Number of subdivisions) = 40
-   Peak Performance =    12.26 MegaHeights/Sec
-Average Performance =    11.33 MegaHeights/Sec
-Average Elapsed Time =  145.48 microseconds
+   Peak Performance =     6.90 MegaHeights/Sec
+Average Performance =     6.84 MegaHeights/Sec
+Average Elapsed Time =  233.99 microseconds
+|
+.---_NUMS(Number of subdivisions) = 80
+   Peak Performance =     7.14 MegaHeights/Sec
+Average Performance =     7.10 MegaHeights/Sec
+Average Elapsed Time =  901.21 microseconds
 |
 .---_NUMS(Number of subdivisions) = 160
-   Peak Performance =     9.82 MegaHeights/Sec
-Average Performance =     9.63 MegaHeights/Sec
-Average Elapsed Time = 2657.54 microseconds
+   Peak Performance =     7.13 MegaHeights/Sec
+Average Performance =     7.11 MegaHeights/Sec
+Average Elapsed Time = 3599.12 microseconds
+|
+.---_NUMS(Number of subdivisions) = 320
+   Peak Performance =    13.69 MegaHeights/Sec
+Average Performance =     9.28 MegaHeights/Sec
+Average Elapsed Time = 12089.73 microseconds
 |
 .---_NUMS(Number of subdivisions) = 640
-   Peak Performance =    12.39 MegaHeights/Sec
-Average Performance =    12.32 MegaHeights/Sec
-Average Elapsed Time = 33240.66 microseconds
+   Peak Performance =    13.69 MegaHeights/Sec
+Average Performance =    12.89 MegaHeights/Sec
+Average Elapsed Time = 32931.59 microseconds
 |
-.---_NUMS(Number of subdivisions) = 2560
-   Peak Performance =    12.41 MegaHeights/Sec
-Average Performance =    12.28 MegaHeights/Sec
-Average Elapsed Time = 533668.48 microseconds
-|
-.---_NUMS(Number of subdivisions) = 10240
-   Peak Performance =    12.34 MegaHeights/Sec
-Average Performance =    12.07 MegaHeights/Sec
-Average Elapsed Time = 8689541.29 microseconds
-|
-.---_NUMS(Number of subdivisions) = 40960
-   Peak Performance =    12.18 MegaHeights/Sec
-Average Performance =    11.51 MegaHeights/Sec
-Average Elapsed Time = 146215820.98 microseconds
+.---_NUMS(Number of subdivisions) = 1280
+   Peak Performance =    13.27 MegaHeights/Sec
+Average Performance =    12.41 MegaHeights/Sec
+Average Elapsed Time = 136234.50 microseconds
 ---------------------------------------------------------
 _NUMT(Number of Threads) = 2
 |
 .---_NUMS(Number of subdivisions) = 10
-   Peak Performance =    20.73 MegaHeights/Sec
-Average Performance =    16.27 MegaHeights/Sec
-Average Elapsed Time =   15.35 microseconds
+   Peak Performance =    12.14 MegaHeights/Sec
+Average Performance =    11.71 MegaHeights/Sec
+Average Elapsed Time =   10.38 microseconds
 |
 .---_NUMS(Number of subdivisions) = 20
-   Peak Performance =    23.66 MegaHeights/Sec
-Average Performance =    18.61 MegaHeights/Sec
-Average Elapsed Time =   26.98 microseconds
+   Peak Performance =    13.20 MegaHeights/Sec
+Average Performance =    12.71 MegaHeights/Sec
+Average Elapsed Time =   32.90 microseconds
 |
 .---_NUMS(Number of subdivisions) = 40
-   Peak Performance =    24.53 MegaHeights/Sec
-Average Performance =    22.47 MegaHeights/Sec
-Average Elapsed Time =   82.50 microseconds
+   Peak Performance =    13.71 MegaHeights/Sec
+Average Performance =    10.77 MegaHeights/Sec
+Average Elapsed Time =  153.28 microseconds
+|
+.---_NUMS(Number of subdivisions) = 80
+   Peak Performance =    14.25 MegaHeights/Sec
+Average Performance =    13.69 MegaHeights/Sec
+Average Elapsed Time =  469.20 microseconds
 |
 .---_NUMS(Number of subdivisions) = 160
-   Peak Performance =    24.73 MegaHeights/Sec
-Average Performance =    24.14 MegaHeights/Sec
-Average Elapsed Time = 1061.45 microseconds
+   Peak Performance =    14.26 MegaHeights/Sec
+Average Performance =    13.74 MegaHeights/Sec
+Average Elapsed Time = 1884.28 microseconds
+|
+.---_NUMS(Number of subdivisions) = 320
+   Peak Performance =    14.26 MegaHeights/Sec
+Average Performance =    13.92 MegaHeights/Sec
+Average Elapsed Time = 7389.82 microseconds
 |
 .---_NUMS(Number of subdivisions) = 640
-   Peak Performance =    24.61 MegaHeights/Sec
-Average Performance =    24.31 MegaHeights/Sec
-Average Elapsed Time = 16849.19 microseconds
+   Peak Performance =    27.31 MegaHeights/Sec
+Average Performance =    21.92 MegaHeights/Sec
+Average Elapsed Time = 20448.96 microseconds
 |
-.---_NUMS(Number of subdivisions) = 2560
-   Peak Performance =    24.59 MegaHeights/Sec
-Average Performance =    24.12 MegaHeights/Sec
-Average Elapsed Time = 271816.23 microseconds
-|
-.---_NUMS(Number of subdivisions) = 10240
-   Peak Performance =    24.40 MegaHeights/Sec
-Average Performance =    23.57 MegaHeights/Sec
-Average Elapsed Time = 4457613.23 microseconds
-|
-.---_NUMS(Number of subdivisions) = 40960
-   Peak Performance =    24.38 MegaHeights/Sec
-Average Performance =    24.15 MegaHeights/Sec
-Average Elapsed Time = 69485040.27 microseconds
+.---_NUMS(Number of subdivisions) = 1280
+   Peak Performance =    26.06 MegaHeights/Sec
+Average Performance =    23.82 MegaHeights/Sec
+Average Elapsed Time = 71530.82 microseconds
 ---------------------------------------------------------
 _NUMT(Number of Threads) = 4
 |
 .---_NUMS(Number of subdivisions) = 10
-   Peak Performance =    24.81 MegaHeights/Sec
-Average Performance =    21.19 MegaHeights/Sec
-Average Elapsed Time =   16.02 microseconds
+   Peak Performance =    29.61 MegaHeights/Sec
+Average Performance =    26.21 MegaHeights/Sec
+Average Elapsed Time =    5.03 microseconds
 |
 .---_NUMS(Number of subdivisions) = 20
-   Peak Performance =    38.70 MegaHeights/Sec
-Average Performance =    32.57 MegaHeights/Sec
-Average Elapsed Time =   22.36 microseconds
+   Peak Performance =    24.51 MegaHeights/Sec
+Average Performance =    23.48 MegaHeights/Sec
+Average Elapsed Time =   18.50 microseconds
 |
 .---_NUMS(Number of subdivisions) = 40
-   Peak Performance =    48.24 MegaHeights/Sec
-Average Performance =    40.12 MegaHeights/Sec
-Average Elapsed Time =   49.08 microseconds
+   Peak Performance =    26.84 MegaHeights/Sec
+Average Performance =    26.18 MegaHeights/Sec
+Average Elapsed Time =   62.48 microseconds
+|
+.---_NUMS(Number of subdivisions) = 80
+   Peak Performance =    28.34 MegaHeights/Sec
+Average Performance =    26.14 MegaHeights/Sec
+Average Elapsed Time =  251.37 microseconds
 |
 .---_NUMS(Number of subdivisions) = 160
-   Peak Performance =    47.20 MegaHeights/Sec
-Average Performance =    42.09 MegaHeights/Sec
-Average Elapsed Time =  615.75 microseconds
+   Peak Performance =    28.52 MegaHeights/Sec
+Average Performance =    28.15 MegaHeights/Sec
+Average Elapsed Time =  909.95 microseconds
+|
+.---_NUMS(Number of subdivisions) = 320
+   Peak Performance =    28.48 MegaHeights/Sec
+Average Performance =    27.82 MegaHeights/Sec
+Average Elapsed Time = 3681.06 microseconds
 |
 .---_NUMS(Number of subdivisions) = 640
-   Peak Performance =    47.61 MegaHeights/Sec
-Average Performance =    46.23 MegaHeights/Sec
-Average Elapsed Time = 8865.10 microseconds
+   Peak Performance =    52.34 MegaHeights/Sec
+Average Performance =    42.02 MegaHeights/Sec
+Average Elapsed Time = 10670.42 microseconds
 |
-.---_NUMS(Number of subdivisions) = 2560
-   Peak Performance =    48.19 MegaHeights/Sec
-Average Performance =    46.00 MegaHeights/Sec
-Average Elapsed Time = 142776.42 microseconds
-|
-.---_NUMS(Number of subdivisions) = 10240
-   Peak Performance =    47.88 MegaHeights/Sec
-Average Performance =    45.67 MegaHeights/Sec
-Average Elapsed Time = 2300040.57 microseconds
-|
-.---_NUMS(Number of subdivisions) = 40960
+.---_NUMS(Number of subdivisions) = 1280
+   Peak Performance =    50.68 MegaHeights/Sec
+Average Performance =    46.70 MegaHeights/Sec
+Average Elapsed Time = 36847.66 microseconds
+---------------------------------------------------------
+         Speedup-2 =    1.83
+         Speedup-4 =    3.55
+Parallel Fraction-2 =    0.90
+Parallel Fraction-3 =    0.96

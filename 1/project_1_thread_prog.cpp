@@ -5,8 +5,8 @@
 
 #define NUMT	        _NUMT
 #define NUMNODES        _NUMS
-#define NUMTRIES	10
-	
+#define NUMTRIES	100
+
 #define XMIN	 0.
 #define XMAX	 3.
 #define YMIN	 0.
@@ -94,7 +94,7 @@ int main(){
         double maxMegaHeights = 0.;
         double sumMegaHeights = 0.;
 	double sumTime = 0.;
-
+	double sumAvg = 0.;
         omp_set_num_threads( NUMT );
 
 	for ( int t = 0; t < NUMTRIES; t++)
@@ -121,10 +121,9 @@ int main(){
 			{
 				iv /= 2;
 			}
-			int currentTrap = Height(iu, iv) * fullTileArea;
-			sum += currentTrap;
+			sum += Height(iu, iv);
 		}
-
+		sum *= fullTileArea;
 	        double time1 = omp_get_wtime( );
                 double megaHeights = (double)(NUMNODES*NUMNODES)/(time1-time0)/1000000.;
                 sumMegaHeights += megaHeights;
@@ -132,9 +131,9 @@ int main(){
                         maxMegaHeights = megaHeights;
 
 		sumTime += (double)(1000000.*(time1-time0));
+		sumAvg += sum;
 	}
-	
-
+	sumAvg /= (double)NUMTRIES;
 	double avgMegaHeights = sumMegaHeights/(double)NUMTRIES;
         printf("   Peak Performance = %8.2lf MegaHeights/Sec\n", maxMegaHeights);
         printf("Average Performance = %8.2lf MegaHeights/Sec\n", avgMegaHeights);
@@ -142,14 +141,20 @@ int main(){
 	double avgTime = sumTime/(double)NUMTRIES;
 	printf("Average Elapsed Time = %7.2lf microseconds\n", avgTime);
 
-        fprintf(stderr, "   Peak Performance = %8.2lf MegaHeights/Sec\n", maxMegaHeights);
-        fprintf(stderr, "Average Performance = %8.2lf MegaHeights/Sec\n", avgMegaHeights);
+	fprintf(stderr, "                sum = %8.2lf\n", sumAvg);
+  fprintf(stderr, "   Peak Performance = %8.2lf MegaHeights/Sec\n", maxMegaHeights);
+  fprintf(stderr, "Average Performance = %8.2lf MegaHeights/Sec\n", avgMegaHeights);
 	fprintf(stderr, "Average Elapsed Time = %7.2lf microseconds\n", avgTime);
 
 	FILE* fp;
 	fp = fopen("results.txt", "a");
 	fprintf(fp, "%.2lf\n", avgTime);
 	fclose(fp);
+
+	FILE* fptr;
+	fptr = fopen("data1.cvs", "a");
+	fprintf(fptr, "%.2lf, %.2lf, %.2lf, %.2lf\n", sumAvg, maxMegaHeights, avgMegaHeights, avgTime);
+	fclose(fptr);
 
         return 0;
 }
