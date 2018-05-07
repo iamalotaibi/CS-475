@@ -2,12 +2,14 @@
 
 result0File="results-type-0.txt"
 result1File="results-type-1.txt"
+data0File="data_type_0.txt"
+data1File="data_type_1.txt"
 outputFile="output.txt"
-dataFile="data.csv"
 > $result0File
 > $result1File
+> $data0File
+> $data1File
 > $outputFile
-> $dataFile
 # number of threads:
 
 for type in 0 1
@@ -28,4 +30,5 @@ done
 g++ -o speed_prog project_3_speed_prog.cpp -D_NUMT=3 -D_NUM=16
 ./speed_prog
 rm thread_prog speed_prog
-cat $dataFile
+cat $data0File
+cat $data1File
