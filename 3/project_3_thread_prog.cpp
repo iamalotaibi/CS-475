@@ -32,7 +32,7 @@ int main( int argc, char *argv[ ] )
 			float tmp = Array[ i ].value;
 			for( int j = 0; j < SomeBigNumber; j++ )
 			{
-				tmp = tmp + (float)rand( );
+				tmp = tmp + 2.;
 			}
 			Array[ i ].value = tmp;
 		}
@@ -55,8 +55,16 @@ int main( int argc, char *argv[ ] )
 	printf("       Elapsed Time = %8.2lf microseconds\n", timeSpent);
 
 	FILE* fp;
-	fp = fopen("results.txt", "a");
-	fprintf(fp, "%.2lf\n", timeSpent);
+	if(TYPE == 0)
+	{
+		fp = fopen("results-type-0.txt", "a");
+		fprintf(fp, "%.2lf\n", timeSpent);
+	}
+	else
+	{
+		fp = fopen("results-type-1.txt", "a");
+		fprintf(fp, "%.2lf\n", timeSpent);
+	}
 	fclose(fp);
 	return 0;
 

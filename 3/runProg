@@ -10,14 +10,14 @@ dataFile="data.csv"
 
 for type in 0 1
 do
-	for t in 1 2 4 8
+	for t in 1 2 4
 	do
 		for num in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 		do
 				echo _NUMT\(Number of Threads\) = $t
 				echo _NUM = $num
 				echo _TYPE = $type
-				g++ -D_NUMT=$t -D_NUM=$num -D_TYPE=$type project_3_thread_prog.cpp -o thread_prog -lm -fopenmp -O0
+				g++ -D_NUMT=$t -D_NUM=$num -D_TYPE=$type project_3_thread_prog.cpp -o thread_prog -lm -fopenmp -O
 				./thread_prog
 				echo ---------------------------------------------------------
 		done
