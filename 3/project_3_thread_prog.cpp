@@ -8,11 +8,17 @@
 #define NUMT	        _NUMT
 #define TYPE	        			_TYPE
 
-struct s
+struct s1
 {
 	float value;
   int pad[NUM];
-} Array[4];
+} Array1[4];
+
+struct s2
+{
+	float value;
+  int pad[NUM];
+} Array2[4];
 
 int main( int argc, char *argv[ ] )
 {
@@ -29,12 +35,10 @@ int main( int argc, char *argv[ ] )
 		#pragma omp parallel for
 		for( int i = 0; i < 4; i++ )
 		{
-			float tmp = Array[ i ].value;
 			for( int j = 0; j < SomeBigNumber; j++ )
 			{
-				tmp = tmp + 2.;
+				Array1[ i ].value = Array1[ i ].value + 2.;
 			}
-			Array[ i ].value = tmp;
 		}
 		time1 = omp_get_wtime( );
 	}
@@ -44,10 +48,12 @@ int main( int argc, char *argv[ ] )
 		#pragma omp parallel for
 		for( int i = 0; i < 4; i++ )
 		{
+			float tmp = Array2[ i ].value;
 			for( int j = 0; j < SomeBigNumber; j++ )
 			{
-				Array[ i ].value = Array[ i ].value + 2.;
+				tmp = tmp + 2.;
 			}
+			Array2[ i ].value = tmp;
 		}
 		time1 = omp_get_wtime( );
 	}
