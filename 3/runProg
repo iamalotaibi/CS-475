@@ -2,8 +2,8 @@
 
 result0File="results-type-0.txt"
 result1File="results-type-1.txt"
-data0File="data_type_0.txt"
-data1File="data_type_1.txt"
+data0File="data_type_0.csv"
+data1File="data_type_1.csv"
 outputFile="output.txt"
 > $result0File
 > $result1File
