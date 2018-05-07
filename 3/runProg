@@ -1,0 +1,34 @@
+#!/bin/bash
+
+result0File="results-type-0.txt"
+result1File="results-type-1.txt"
+data0File="data_type_0.csv"
+data1File="data_type_1.csv"
+outputFile="output.txt"
+> $result0File
+> $result1File
+> $data0File
+> $data1File
+> $outputFile
+# number of threads:
+
+for type in 0 1
+do
+	for t in 1 2 4
+	do
+		for num in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+		do
+				echo _NUMT\(Number of Threads\) = $t
+				echo _NUM = $num
+				echo _TYPE = $type
+				g++ -D_NUMT=$t -D_NUM=$num -D_TYPE=$type project_3_thread_prog.cpp -o thread_prog -lm -fopenmp -O0
+				./thread_prog
+				echo ---------------------------------------------------------
+		done
+	done
+done
+g++ -o speed_prog project_3_speed_prog.cpp -D_NUMT=3 -D_NUM=16
+./speed_prog
+rm thread_prog speed_prog
+cat $data0File
+cat $data1File
