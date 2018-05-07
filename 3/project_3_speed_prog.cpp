@@ -25,7 +25,7 @@ int main(int argc, char *argv[]){
 		line[strcspn(line, "\n")] = 0;
 		threadsTime0[i][j] = atof(line);
 		j++;
-		if( j == 16 )
+		if( j == NUM )
 		{
 			i++;
 			j=0;
@@ -60,6 +60,7 @@ int main(int argc, char *argv[]){
 
 
 	float speedup[NUMT-1][NUM];
+	FILE* fptr;
 	for(i=0; i<NUMT-1; i++)
 	{
 		for(j=0; j<NUM; j++)
@@ -67,7 +68,6 @@ int main(int argc, char *argv[]){
 			speedup[i][j] = (threadsTime0[0][j])/(threadsTime0[i+1][j]);
 			int currentThread = (pow(2, i+1));
 			printf("         Speedup[%d][%d] =%8.2lf\n", i, j, speedup[i][j]);
-			FILE* fptr;
 			fptr = fopen("data_type_0.csv", "a");
 			if(j == NUM-1)
 				fprintf(fptr, "%.2lf\n", speedup[i][j]);
@@ -83,7 +83,6 @@ int main(int argc, char *argv[]){
 			speedup[i][j] = (threadsTime1[0][j])/(threadsTime1[i+1][j]);
 			int currentThread = (pow(2, i+1));
 			printf("         Speedup[%d][%d] =%8.2lf\n", i, j, speedup[i][j]);
-			FILE* fptr;
 			fptr = fopen("data_type_1.csv", "a");
 			if(j == NUM-1)
 				fprintf(fptr, "%.2lf\n", speedup[i][j]);
