@@ -3,6 +3,9 @@
 #include <string.h>
 #include <math.h>
 
+#define NUM									_NUM
+#define NUMT	        _NUMT
+
 int main(int argc, char *argv[]){
 	FILE* fp;
 	char* line = NULL;
@@ -16,7 +19,7 @@ int main(int argc, char *argv[]){
 	}
 
 	int i=0, j=0;
-	float threadsTime0[3][16];
+	float threadsTime0[NUMT][NUM];
 	while((read = getline(&line, &len, fp)) != -1)
 	{
 		line[strcspn(line, "\n")] = 0;
@@ -39,13 +42,13 @@ int main(int argc, char *argv[]){
 	}
 	i=0;
 	j=0;
-	float threadsTime1[3][16];
+	float threadsTime1[NUMT][NUM];
 	while((read = getline(&line, &len, fp)) != -1)
 	{
 		line[strcspn(line, "\n")] = 0;
 		threadsTime1[i][j] = atof(line);
 		j++;
-		if( j == 16 )
+		if( j == NUM )
 		{
 			i++;
 			j=0;
@@ -56,33 +59,33 @@ int main(int argc, char *argv[]){
 		free(line);
 
 
-	float speedup[2][16];
-	for(i=0; i<2; i++)
+	float speedup[NUMT-1][NUM];
+	for(i=0; i<NUMT-1; i++)
 	{
-		for(j=0; j<16; j++)
+		for(j=0; j<NUM; j++)
 		{
 			speedup[i][j] = (threadsTime0[0][j])/(threadsTime0[i+1][j]);
 			int currentThread = (pow(2, i+1));
 			printf("         Speedup[%d][%d] =%8.2lf\n", i, j, speedup[i][j]);
 			FILE* fptr;
 			fptr = fopen("data_type_0.csv", "a");
-			if(j == 15)
+			if(j == NUM-1)
 				fprintf(fptr, "%.2lf\n", speedup[i][j]);
 			else
 				fprintf(fptr, "%.2lf, ", speedup[i][j]);
 			fclose(fptr);
 		}
 	}
-	for(i=0; i<2; i++)
+	for(i=0; i<NUMT-1; i++)
 	{
-		for(j=0; j<16; j++)
+		for(j=0; j<NUM; j++)
 		{
 			speedup[i][j] = (threadsTime1[0][j])/(threadsTime1[i+1][j]);
 			int currentThread = (pow(2, i+1));
 			printf("         Speedup[%d][%d] =%8.2lf\n", i, j, speedup[i][j]);
 			FILE* fptr;
 			fptr = fopen("data_type_1.csv", "a");
-			if(j == 15)
+			if(j == NUM-1)
 				fprintf(fptr, "%.2lf\n", speedup[i][j]);
 			else
 				fprintf(fptr, "%.2lf, ", speedup[i][j]);

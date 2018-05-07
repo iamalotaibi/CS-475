@@ -1,9 +1,11 @@
 #!/bin/bash
 
-resultFile="results.txt"
+result0File="results-type-0.txt"
+result1File="results-type-1.txt"
 outputFile="output.txt"
 dataFile="data.csv"
-> $resultFile
+> $result0File
+> $result1File
 > $outputFile
 > $dataFile
 # number of threads:
@@ -23,7 +25,7 @@ do
 		done
 	done
 done
-g++ -o speed_prog project_3_speed_prog.cpp
+g++ -o speed_prog project_3_speed_prog.cpp -D_NUMT=3 -D_NUM=16
 ./speed_prog
-rm thread_prog speed_prog $resultFile
+rm thread_prog speed_prog
 cat $dataFile
