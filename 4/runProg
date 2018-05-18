@@ -1,0 +1,6 @@
+#!/bin/bash
+
+outputFile="results.csv"
+> $outputFile
+g++ game.cpp -o game -lm -fopenmp
+./game

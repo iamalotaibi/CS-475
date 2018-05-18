@@ -1,0 +1,238 @@
+\documentclass[11pt, titlepage]{article}
+% stackholder
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+% --- include packages ---
+% to read from database of references
+\usepackage[cm]{fullpage}
+% to use different colors
+\usepackage{color}
+% to assign file main language
+\usepackage[utf8]{inputenc}
+% to read from database of references
+\usepackage{natbib}
+% to for set left text and other stuff
+\usepackage{ragged2e}
+% for Times New Roman font
+\usepackage{mathptmx}
+% for spacing
+\usepackage{setspace}
+% set margin
+\usepackage[margin=1in]{geometry}
+% allowing using urls
+\usepackage{hyperref}
+% to add figures
+\usepackage{graphicx}
+\graphicspath{ {figures/} }
+% to customize page layout, set indent subheading
+\usepackage{changepage}   % for the adjustwidth environment
+% capitalize
+\usepackage{mfirstuc}
+\MFUnocap{of}
+\MFUnocap{or}
+\MFUnocap{etc}
+\MFUnocap{is}
+\MFUnocap{to}
+\MFUnocap{be}
+\MFUnocap{and}
+\MFUnocap{about}
+
+% generating lipsum
+\usepackage{lipsum}
+
+% --- information about the document ---
+\makeatletter
+\title{\sffamily \huge \textbf{Web Accessibility}} \let\Title\@title
+\author{\sffamily \Large Mazen Alotaibi} \let\Author\@author
+\date{\sffamily \large \today} \let\Date\@date
+\makeatother
+
+% --- format page ---
+\singlespacing
+\thispagestyle{empty}
+% --- format parameters ---
+\renewcommand{\refname}{\sffamily \LARGE \capitalisewords{Works Cited}}
+\newenvironment{index_me} {
+	\begin{adjustwidth}{2cm}{}
+}{\end{adjustwidth}}
+\newenvironment{cite_figure}[1]
+{
+	See \textbf{Figure #1}
+}{}
+\newenvironment{add_figure}[4]{
+  \begin{figure}[h]
+    \centering \sffamily
+    \includegraphics[width=0.5\textwidth]{#1}
+    \textbf{\fontsize{11.5}{11.5} \caption{#2}}
+    #3 \textit{#4}
+  \end{figure}
+}{}
+% --- pre-defined structures ---
+\newenvironment{doc_heading}[1]
+{
+     \section*{\sffamily \LARGE \capitalisewords{#1}}
+}{}
+\newenvironment{doc_subheading}[1]
+{
+	\begin{index_me}
+    \subsection*{\sffamily\Large \capitalisewords{#1}}
+}{\end{index_me}}
+% --- start document --
+\begin{document}
+% --- title page ---
+\maketitle
+
+% ---------------------------------- useful structures ----------------------------------
+\iffalse
+Random citation \cite{WEBSITE:1} embeddeed in text. gggg
+Random citation \cite{DUMMY:1} embeddeed in text.
+  \begin{doc_subheading}{subsection}
+  \end{doc_subheading}
+\begin{cite_figure}{1} \end{cite_figure}
+
+\begin{add_figure}
+    {}
+    {addadaad}
+    {lol}
+    {mazen}
+\end{add_figure}
+
+
+
+https://news.un.org/en/story/2015/11/516862-some-32-billion-people-now-online-number-still-falls-short-internet-target-un
+\fi
+
+% ---------------------------------- introduction ----------------------------------
+\begin{doc_heading}{Introduction}
+According to UN NEWS (2015), more than 3.2 billion users of the Internet in 2015, and the number of users will reach 60\% of the global population by 2020. In addition, according to World Health Organization (2017), there are more than 253 million people live with vision impairment in the world, 36 million are blind. Individuals who live with vision impairment in 2018 have a disadvantage compared to their peers because of the limitations of using the Internet, a Web Accessibility Issue. This document focuses on web accessibility issues for individuals who have vision impairment not any other type of disabilities. The document will discuses about background, the accessibility issue and the affected individuals, the ramifications of the issue, accommodations and solutions, and concluding with a future remark about future implementations of web accessibility.
+\end{doc_heading}
+
+
+
+
+% ---------------------------------- background ----------------------------------
+\iffalse
+Sources:
+
+https://medium.freecodecamp.org/web-development-explained-to-a-time-traveler-from-ten-years-ago-600fad81170d
+
+https://cielo24.com/2017/03/a-brief-history-of-accessibility-law-us/
+
+ http://carlcheo.com/compsci
+
+ https://www.history.com/topics/inventions/invention-of-the-internet
+
+ http://www.dictionary.com/browse/website
+\fi
+
+
+\begin{doc_heading}{Background}
+\color{white}.\vspace{-0.5in}\color{black}
+% major
+  \begin{doc_subheading}{What is Computer Science?}
+  	According to , computer science is the study of computers and computational systems, which focuses on building intelligent algorithms to solve real-world problems. According to History.com (2016) the development of computer science produced the computer networks known as "World-Wide-Web", which allows scientists to share their researches in late 1990s, however, in late 2000s, the World-Wide-Web became a tool for businesses to interact with their consumers through websites, which a location connect to the Internet that maintains one or more pages on the the World-Wide-Web (Dictionary.com).
+  \end{doc_subheading}
+% relationship to accessibility issue
+  \begin{doc_subheading}{How Computer Science is Related to Web Accessibility?}
+  	One of computer science branches is web development. According to Zarea, a web developer creates website that can be consumed by online users on the Internet, so some of a web developer's tasks are displaying items in the website to be purchased by on-line users, collecting data from on-line users to better predict their purchasing habits, and creating better website user interfaces to help on-line users to navigate through the website.
+  \end{doc_subheading}
+% historical context for accessibility issue
+  \begin{doc_subheading}{Historical Information about Web Accessibility}
+  	According to Wells, the Americans with Disabilities Act Amendments Act of 2008 became law in 2008, which increased the domain of people who are considered to be disabled, The 21st Century Communications and Video Accessibility Act is signed into law in 2010, which required all programs shown on TV to be broadcast with a caption, and The U.S. Access Board approves the ICT Refresh for Section 508 of the Rehabilitation Act in 2016, which requires federal agencies to make their electronic and information technology accessible to disabled employees and public. Because of universities who are funded by any federal agency, the universities need to follow the Section 508 of the Rehabilitation Act. In addition, after the
+  \end{doc_subheading}
+\end{doc_heading}
+
+
+
+
+
+% ---------------------------------- The Accessibility Issue ----------------------------------
+\iffalse
+Sources:
+
+https://www.aoa.org/patients-and-public/good-vision-throughout-life/adult-vision-19-to-40-years-of-age/adult-vision-41-to-60-years-of-age
+
+https://www.w3.org/WAI/older-users/
+
+https://developer.paciellogroup.com/blog/2011/10/brief-history-of-browser-accessibility-support/
+
+http://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment
+
+https://webaim.org/articles/visual/blind
+\fi
+
+\vspace{0.5in}
+\begin{doc_heading}{The Accessibility Issue}
+\color{white}.\vspace{-0.5in}\color{black}
+% elderly people can't see and have trouble time browsing for basic stuff
+  \begin{doc_subheading}{Elderly}
+  	According to American Optometric Association, as an individual ages, their vision becomes weak because of chronic conditions, a family history of glaucoma, a highly visually demeaning job, or health conditions related to high cholesterol. Therefore, according to Web Accessibility Initiative, elderly people tend to have difficulties in reading websites because of the selection of font type, the size of font, background colors, or the amount of information presented in the website.
+  \end{doc_subheading}
+% people who are blind, can't use basic websites as others
+  \begin{doc_subheading}{Blindness}
+  	According to World Health Organization (2017), there are more than 253 million people live with vision impairment in the world, 36 million are blind. Therefore, according to Web Accessibility in Mind (n.d.), individuals, who are blind, are limited in using only keyboards because they can't navigate using mouse on monitor, so they need to use a software product that help translate words on a screen into audio messages.
+  \end{doc_subheading}
+\end{doc_heading}
+
+
+
+
+% ---------------------------------- The Ramifications of the Issue ----------------------------------
+\iffalse
+Sources:
+
+http://www.afb.org/info/programs-and-services/professional-development/aging/recognizing-and-responding-to-medical-issues/depression/12345
+\fi
+
+
+\begin{doc_heading}{The Ramifications of the Issue}
+\color{white}.\vspace{-0.5in}\color{black}
+% consequences of not treating these people, make them interact less with the outside community
+% become depressed, limited
+  \begin{doc_subheading}{individual Level}
+  	According to American Foundation for the Blind (n.d.), many studies shows that one-third of all older adults are depressed and the possibility for an older adult with impaired vision to be depressed is twice compared to an older adult with no sensory impairments. In addition, individuals who are blinds have difficult time in browsing most of the the Internet because most of websites don't support software products that help translate words on a screen into audio messages.
+  \end{doc_subheading}
+% the community won't have the ability to use the intellectual power that the disabled person has because of their disability
+  \begin{doc_subheading}{Cultural Level}
+  	Any business company that doesn't follow the web accessibility standards, they will lose a part of their consumers because either their consumers have vision impairment, or their consumers know someone that have vision impairment. In addition, a society that doesn't force website to follow web accessibility standards, the society will lose the potentials of those individuals who have barriers to be part of the active society.
+  \end{doc_subheading}
+\end{doc_heading}
+
+
+
+
+% ---------------------------------- Accommodations and Solutions ----------------------------------
+\iffalse
+Sources:
+
+https://mashable.com/2011/04/20/design-for-visually-impaired/#TmeefOmvYPqC
+
+http://www.afb.org/info/programs-and-services/afb-consulting-services/afb-accessibility-resources/123
+https://www.hobo-web.co.uk/design-website-for-blind/#-rnib-royal-national-institute-for-the-blind
+
+https://www.livestrong.com/article/241936-challenges-that-blind-people-face/
+
+\fi
+
+
+\begin{doc_heading}{Accommodations and Solutions}
+According to Anderson, S. (2018), we have a legal obligation to make reasonable adjustment to ensure blind and partially sighted people can access our service because of section 21 of the Disability Discrimination Act. Therefore, to meet government accessibility standards in 2018, web developers must take an account of their disabled users.
+\end{doc_heading}
+
+
+
+% ---------------------------------- conclusion ----------------------------------
+\iffalse
+https://www.ontario.ca/page/path-2025-ontarios-accessibility-action-plan
+\fi
+\begin{doc_heading}{Conclusion}
+The minister of economic development in Ontario, Canada, Brad Duguid, aims to force private and public businesses to follow the AODA accessibility standards, which includes customer service, employment, information and communications, transportation, and design of public spaces, to be implemented, \begin{cite_figure}{1} \end{cite_figure} for the predicted implementation size for each sector. When a private sector doesn't follow the AODA accessibility standards, they will be fined from \$200 to \$2,000 for every individual, and \$500 to \$15,00 for corporations. Furthermore, AODA accessibility standards includes website to be more accessible and user-friendly (Duguid, 2015).\\
+\end{doc_heading}
+
+
+
+% ---------------------------------- references ----------------------------------
+\newpage
+\bibliography{sources.bib}
+\bibliographystyle{apalike}
+\nocite{*}
+\end{document}
